@@ -1,0 +1,55 @@
+h1 {
+	color: red;
+}
+
+input, button {
+	display: block;
+	margin: 1px auto;
+	width: 220px;
+}
+
+div#floatycontainer {
+	width: 90%;
+	margin: 20px auto;
+}
+
+
+
+.centertext {
+	text-align: center;
+}
+
+.boldtext {
+	font-weight: bold;
+}
+
+div.blockinfo {
+	background-color: lightgrey;
+	padding: 5px;
+}
+
+div#transactioninfo {
+	background-color: lightblue;
+	padding: 20px;
+}
+
+div.transblock {
+	background-color: white;
+	border: 1px grey solid;
+	padding: 2px;
+}
+
+h3.tinyhead {
+	margin: 15px 0 0 0;
+	background-color: lightblue;
+	width: 120px;
+	padding: 3px;
+}
+
+code {
+	background-color: #F6CECE;
+}
+
+div.overflow {
+	overflow: scroll;
+}

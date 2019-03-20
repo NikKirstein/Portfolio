@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>FyreDApp</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="/javascripts/bundle.js"></script>
+  </head>
+  <body>
+
+  <div id="floatycontainer">
+	  <h1 class="centertext">The Fyresite DApp</h1>
+
+	  <p class="centertext">Tickets left: <span class="boldtext" id="ticketholder"></span></p>
+
+	  <input class="centertext" id="address" placeholder="Insert Ethereum Address">
+	  <input class="centertext" id="ticketsbuyamount" type="number" min="0" placeholder="Amount of tickets to buy">
+	  <input class="centertext" id="inputemail" type="email" placeholder="Insert Email here">
+
+	  <button id="submitpurchase">Confirm Purchase</button>
+
+	  <div class="infocontainer">
+		  	<div class="blockinfo coldiv">
+		  		<h3 class="boldtext">Live updates from the Network</h3>
+		  		<span class="boldtext">Block Number: </span><span id="blocknum"></span><br/>
+		  		<span class="boldtext">Block hash: </span><span id="blockhash"></span><br/>
+		  		<span class="boldtext">Miner: </span><span id="miner"></span><br/>
+		  		<span class="boldtext">Transactions: </span><span id="transamnt"></span>
+		  	</div>
+
+		  	<h3 class="boldtext tinyhead">Transactions:</h3>
+			  	<div id="transactioninfo" class="coldiv"></div>
+	  	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	  <div class="notes coldiv">
+	  <p id="notes"><span class="boldtext">Notes:</span><br/>
+	  		<ul>
+		  		<li>Currently the button above is set up to simply do transactions from the contract to account 1. </li>
+		  		<li>Check code comments for which addresses go in which location in the code.  They are marked.</li>
+		  		<li>Contract addresses come from truffle deploy terminal.</li>
+		  		<li>Testing accounts come from the testrpc terminal.</li>
+		  		<br/>
+
+		  		<li>To unlock accounts for testing, boot up the testrpc using the command: <code>testrpc --secure -u 0 -u 1</code><br/>
+		  		-u is unlock, the numbers are accounts, 0 and 1</li> <br/>
+
+		  		<li>The browserfy command is: <code>browserify app.js -o bundle.js</code><br/>
+		  		and must be done from within the javascript file in the WebApp part.</li> <br/>
+
+		  		<li>The python server for hosting the Dapp is: <code>python3 -m http.server 8000</code></li> <br/>
+
+		  		<li>The Javascript API is important but always make sure you are using the 0.x.x one
+		  		instead of the 1.0 one which isn't released yet.</li> <br/>
+
+		  		<li>To test transactions using .send or .transfer of ether directly from one account to the contract
+		  		The DApp and contract must be connected to the test network through geth or something.  Ropsten not Morden.  </li> <br/>
+
+		  		<li>Connect to Testnet command: <br/><div class="overflow"><code>geth console --testnet --syncmode "fast" --rpc --rpcapi db,eth,net,web3,personal --cache=1024  --rpcport 8545 --rpcaddr 127.0.0.1 --rpccorsdomain "*" --bootnodes "enode://20c9ad97c081d63397d7b685a412227a40e23c8bdc6688c6f37e97cfbc22d2b4d1db1510d8f61e6a8866ad7f0e17c02b14182d37ea7c3c8b9c2683aeb6b733a1@52.169.14.227:30303,enode://6ce05930c72abc632c58e2e4324f7c7ea478cec0ed4fa2528982cf34483094e9cbc9216e7aa349691242576d552a2a56aaeae426c5303ded677ce455ba1acd9d@13.84.180.240:30303"</code></div></li>
+
+	  		</ul>
+
+	  	</p>
+	  	</div>
+
+
+  </div>
+
+
+  </body>
+</html>
