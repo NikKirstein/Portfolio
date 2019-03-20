@@ -1,0 +1,58 @@
+@media  (min-width: 481px) and (max-width: 768px) /* tablets in portrait mode */
+{
+
+body
+{
+	width: 80%;
+}
+
+#slideshow-div
+{
+display: none;
+}
+
+
+#content
+{
+   clear: both;
+   overflow: hidden;
+   margin-left:auto;
+   margin-right:auto;
+}
+
+#content article
+{
+	margin: 1% auto;
+	padding: 2%;
+	width: 96%;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*
+
+ #firstname, #lastname,  #email, #item
+ {
+    position: absolute;
+    left: 40%;
+ }
+
+ #comments{
+	max-width: 200px;
+ 
+ }
+
+*/
+ 
+ nav li{
+    width: 44%;
+ }
+ 
+ 
+form
+{
+	width: 80%;
+}
+ 
+}

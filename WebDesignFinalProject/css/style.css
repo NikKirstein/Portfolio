@@ -1,0 +1,354 @@
+
+body
+{
+	line-height: 140%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0;
+    margin-bottom:0;
+	width: 70%;
+    background-color: #90acc9;
+    font-family: abel, sans-serif;
+
+    background-color: rgba(25, 19, 39, 0.85);
+    background-image: linear-gradient(rgba(25, 19, 39, 0.67) 0%, rgba(25, 19, 39, 0.67) 100% ),url('../images/textures/037.jpg'); /* clouds background */
+                  
+    background-size: auto 100%;
+       
+}
+
+#wrap
+{
+	/*background-color: rgba(25, 19, 39, 0.85); */
+    background-image: linear-gradient(rgba(0,0,0, .6) 0%, rgba(0,0,0,.95) 100% ); /*transparent black wrapper */
+    margin-bottom: 0px;
+    border-width:0px;
+    border-radius: 20px 20px 0px 0px ;
+    border-color:transparent;
+    padding: 10px 1%;
+    padding-bottom: 0px;
+}
+
+header
+{
+	text-align: center;
+    margin-top:30px;
+}
+
+h1
+{
+	margin-top: 0;
+}
+
+/************* logo ************/
+#logo
+{
+    text-indent: -9999px;
+    background-image: url('../images/logos/blueyellow.png');
+    background-repeat: no-repeat;
+	display: block;
+	width: 174px;
+    height:84px;
+    margin-left: 5%;
+    margin-top: 0px;
+
+}
+
+
+
+/************************************ Begin Navigation *****************************/
+nav {
+margin-left: auto;
+margin-right: auto;
+border: 1px solid transparent;
+width: 100%;
+}
+
+
+
+nav ul:after
+{
+    content: '';
+    display:block;
+    clear:both;
+    visibility: hidden;
+    font-size:0;
+    height:0;
+}
+
+
+nav li{
+font-size: 120%;
+display: block;
+width: 25%;
+width: calc(23% - 2px);
+margin: 0;
+margin: 0 .5%;
+float: left;
+text-align: center;
+font-weight: bold;
+
+}
+
+
+nav li a
+{
+	width:auto;
+	display: block;
+	text-decoration: none;
+	color: white;
+    -webkit-transition: color .5s, font-size 2s;
+    -moz-transition: color .5s;
+    -ms-transition: color .5s;
+    -o-transition:color .5s;
+    transition: color .5s, font-size .5s;
+    border-bottom: 2px solid #FFF;
+    
+}
+
+li a.current
+{  
+    font-weight: bold;
+	border-color: rgba(228, 255, 0, .8);
+}
+
+li a:hover
+{
+    font-size: 130%;
+    color: rgba(228, 255, 0, .8);
+}
+
+
+
+
+
+/************************* End Navigation *********************/
+
+
+/********************* main *****************/
+.main
+{
+    margin: 0%;
+    margin-bottom: 0px;
+    padding: 10px 30px;
+    position: relative;
+    border: 0px;
+    overflow: auto;
+	background-color: rgba(255, 255, 255, 1);
+	margin-bottom: 30px;
+}
+
+img
+{
+	max-width: 100%;
+}
+
+
+.ImgSlides
+{
+
+	position: relative;
+	height: 500px;
+	text-align: center;
+	background-color: #FFF;
+}
+
+.ImgSlides img
+{
+	position: absolute;
+	top: 70px;
+	left: calc(50% - 300px);
+	display:block;
+	max-width: 100%;
+}
+
+h3, h2
+{
+	text-align: center;
+}
+
+.contact
+{
+	text-align: center;
+}
+/***************************** making the boxes arrange correctly **************/
+
+#content
+{
+   clear: both;
+   overflow: hidden;
+   width: 100%;
+}
+
+#content article
+{
+   margin: 1% 1%;
+   padding: 2%;
+   width: calc(44% - 2px);
+   border: 1px solid #E6E6E6;
+   border-radius: 15px;
+   height: 400px;
+   background-color: #FAFAFA;
+   float: left;
+   text-align:center;
+}
+
+#content article:hover
+{
+	;
+}
+
+#content article:nth-child(3) /* rearranging to make two columns */
+{
+    clear: left;
+}
+
+#content article:nth-child(4)
+{
+    clear: none;
+}
+
+/************* Social ************/
+#social 
+    {
+       width: 95px;
+       margin: 30px auto 0 auto;
+    }
+    
+#social:after
+{
+    content: '';
+    display:block;
+    clear:both;
+    visibility: hidden;
+    font-size:0;
+    height:0;
+}    
+
+
+    #social a
+    {
+       display:block;
+       width:95px;
+       height:26px;
+       text-indent:-10000px;
+       background-image:url('../images/social.png');
+       background-repeat:no-repeat;
+    }
+
+    .facebook {background-position:0 0;}
+
+
+#endstuff
+{
+	text-align: center;
+	margin-top: 30px;
+}
+
+/********************** doctors page *****************/
+/*****************************************************/
+
+
+
+.center{
+margin: 0 auto;
+display: block;
+}
+
+.pediatricians
+{
+	border-style: double;
+	border-width: 3px 0 3px 0;
+	border-color: #E6E6E6;
+}
+
+
+/************************* testimonials page ********/
+/***************************************************/
+
+
+p.testimonials, p.testimonialsalt{
+margin: 2% 8%;
+background-color:rgba(25, 19, 39, 0.85);
+border-radius: 5px;
+color:#FFF;
+padding: 2%;
+position: relative;
+}
+
+p.testimonials:before
+{
+	content: "";
+	border: 15px solid #000;
+	border-color: transparent rgba(25, 19, 39, 0.85) transparent transparent;
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 30px;
+	left: -30px;
+}
+
+p.testimonialsalt:before
+{
+	content: "";
+	border: 15px solid #000;
+	border-color: transparent transparent transparent rgba(25, 19, 39, 0.85);
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 30px;
+	right: -30px;
+}
+
+
+/*************************contact page ***************/
+/*****************************************************/
+
+iframe
+{
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.center
+{
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* form */
+form
+ {
+	width: 50%;
+    background-color: #FAFAFA;
+    margin: 40px auto 3% auto;
+    border: 1px solid #E6E6E6;
+	border-radius: 5px;
+    padding: .5em;
+    text-align: left;
+    padding-top:1em;
+    position:relative;
+ }
+
+ fieldset
+{
+    border-style: none;
+    
+}
+fieldset.personal /* border for grouping/separation */
+{
+    border-style: none none solid none;
+}
+
+
+
+ 
+#firstname, #lastname,  #email, #phone, #comments /*********** all get own row, take up full width of form */
+{
+width: 100%;
+
+ }
