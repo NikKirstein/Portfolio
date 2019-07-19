@@ -2,7 +2,7 @@
 THIS IS FULLY FUNCTIONAL
 
 but the way I did read_and_return
-is hacky as fuck and probably not ideal since I'm literally making a list and then deleting duplicates
+is hacky and probably not ideal since I'm literally making a list and then deleting duplicates
 not the best way at all
 
 But it works c:
