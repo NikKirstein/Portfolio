@@ -1,0 +1,135 @@
+html, body{
+	padding: 0px;
+	margin: 0px;
+    height: 100%
+}
+
+
+
+
+body{
+	background-color: #474448;
+	color: #000000;
+	font-family: 'Open Sans', Arial, sans-serif;
+	margin-left: 10px;
+
+}
+
+
+
+.nav {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.headerButtons{
+    background-color: #474448; /* Matches Background */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: auto;
+    margin-right:auto;
+    opacity: 1;
+    transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -webkit-transition: opacity .5s;
+    -o-transition: opacity .5s;
+}
+
+.headerButtons:hover{
+opacity: 0.65;
+    filter: alpha(opacity=65);
+}
+
+
+.container{
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-width: 2px;
+    border-style: dotted;
+    border-color: #FFFFFF;
+    margin: 0px 12%;
+    height: 100%;
+    overflow: auto;
+    min-width: 700px;
+}
+
+
+
+
+h2{
+	color: #2D232E;
+	font-family: 'Bungee Shade', serif;
+    font-size: 60pt;
+    font-weight: bold;
+    text-align: center;
+
+    margin: 5px;
+	
+}
+
+.quote{
+    margin: 20px auto;
+    max-width: 600px;
+    border-style: dashed;
+    border-color: #534B52;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 90px;
+}
+input {
+  display: inline-block;
+  float: left;
+}
+
+.formFill {
+	margin-bottom: 15px;
+}
+
+
+.adjuster{
+    margin: 4px;
+    background-color: #474448; /* Matches Background */
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    opacity: 1;
+    transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+}
+
+.adjuster:hover{
+opacity: 0.65;
+    filter: alpha(opacity=65);
+}
+
+
+/* Dark Brown Palette Scheme: H@ is #2d232E, background is #474448; */
+.q{
+    font-size: 1.1em;
+}
+.a{
+    text-align: right;
+    font-size: .8em;
+    font-style: italic;
+}
+

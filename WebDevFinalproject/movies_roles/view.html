@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8"/>
+    <title>Movies and Roles</title>
+    <style>
+    .abutton {background:none;border:none;cursor:text;}
+    .abutton:focus {outline:0;}
+    table {border: 1px solid black; border-collapse: collapse; text-align: left; padding: 5px;}
+    th {border: 1px solid black; padding: 5px;}
+    td {border: 1px solid black; padding: 5px; text-align: left;}
+    tr:nth-child(even) {background: #F2F2F2;}
+    </style>
+    </head>
+
+
+    <body>
+  
+        <p style="font-weight:bold;">Search for an actor, one space may separate first and last name. Select the Actor.</p>
+        
+        <input type="text" id="InString" onkeyup="GetActors(this.value)" value="">
+        
+        <hr>
+        
+        <div id="toChange"></div>
+        
+        
+        <script>
+        
+            var divToChange = document.getElementById("toChange");
+            function GetActors(str) {
+                if (str.length == 0) { 
+                    document.getElementById("toChange").innerHTML = "";
+                    return;
+                } 
+                else {
+                var anObj = new XMLHttpRequest();
+                var InString = document.getElementById("InString").value;
+                anObj.open("GET", "controller.php?actor=" + InString, true);
+                anObj.send();
+
+                anObj.onreadystatechange = function() {
+                    if (anObj.readyState == 4 && anObj.status == 200) {
+                        var array = JSON.parse(anObj.responseText);
+                        var str = "";
+                        for (i = 0; i < array.length; i++) {
+                            str += i + ": <input class='abutton' type='button' onclick='GetInfo(this.value)' value='" + (array[i]['first_name'] + ' ' + array[i]['last_name']).toString() + "'>" + "<br>";
+                            divToChange.innerHTML = str;
+                        }
+                    }
+                } //Closing anon function
+                } //Closing else clause
+            } //closing GetActors function
+        
+            function GetInfo(str) {
+                document.getElementById("InString").value = str;
+                var anObj = new XMLHttpRequest();
+                var InString = document.getElementById("InString").value;
+                
+                divToChange.innerHTML = '<table id="mytable"><tr><th>Film</th><th>Role</th></tr></table>';
+                var table = document.getElementById('mytable');
+                
+                anObj.open("GET", "controller.php?info=" + InString, true);
+                anObj.send();
+            
+                anObj.onreadystatechange = function() {
+                    if (anObj.readyState == 4 && anObj.status == 200) {
+                        var array = JSON.parse(anObj.responseText);
+                        for(i = 0; i < array.length; i++) {
+                            var row = table.insertRow(i+1);
+                            var cell1 = row.insertCell(0);
+                            var cell2 = row.insertCell(1);
+                            var name = array[i]['name'];
+                            var role = array[i]['role'];
+                            //str += ("<h2>" + name + ': ' + role + "</h2>"); 				
+                            cell1.innerHTML += (name);
+                            cell2.innerHTML += (role);
+                        }
+                    }
+                }
+            
+            }
+        
+        
+        
+        
+        
+        </script>
+        
+        
+        
+        
+    </body>
+
+</html>
